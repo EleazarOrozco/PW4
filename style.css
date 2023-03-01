@@ -1,95 +1,67 @@
-.container {
+/* Variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #555;
+    --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contenedor */
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
   }
   
-  input[type="text"],
-  input[type="submit"] {
-    font-size: 18px;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
+  /* Entradas de texto y botones */
+  input[type="text"], input[type="email"], input[type="submit"] {
+    font-size: 16px;
+    padding: 10px;
     border: none;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  input[type="submit"] {
-    background-color: #007bff;
+  input[type="submit"][value="Search"] {
+    background-color: var(--primary-color);
     color: #fff;
     cursor: pointer;
   }
   
-  input[type="submit"]:hover {
-    background-color: #0062cc;
-    transform: scale(1.1);
+  input[type="submit"][value="Post!"] {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
   }
   
-  h3 {
-    margin-top: 20px;
-    font-size: 24px;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-  }
-  
-  input[type="submit"] {
-    width: 100%;
-    margin-top: 10px;
-  }
-  
+  /* Estilos de botón */
   input[type="submit"]:hover {
     background-color: #0062cc;
     transform: translateY(-5px);
   }
   
-  ::-webkit-input-placeholder {
-    color: #ccc;
-    font-style: italic;
+  /* Estilos de título */
+  h3 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-color);
   }
-  :-moz-placeholder {
-    color: #ccc;
-    font-style: italic;
-  }
-  ::-moz-placeholder {
-    color: #ccc;
-    font-style: italic;
-  }
+  
+  /* Placeholder */
+  ::-webkit-input-placeholder,
+  :-moz-placeholder,
+  ::-moz-placeholder,
   :-ms-input-placeholder {
     color: #ccc;
     font-style: italic;
   }
-
-  input[type="text"], input[type="email"], input[type="submit"] {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #555;
-    width: 100%;
-    box-sizing: border-box;
-    }
-    
-    input[type="submit"][value="Search"] {
-    background-color: #008CBA;
-    color: #fff;
-    cursor: pointer;
-    }
-    
-
-    input[type="submit"][value="Post!"] {
-    background-color: #4CAF50;
-    color: #fff;
-    cursor: pointer;
-    }
-    
-    h3 {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #555;
-    }
+  
+  /* Estilos específicos */
+  input[type="submit"][value="Search"]:hover {
+    background-color: #0062cc;
+    transform: scale(1.1);
+  }
